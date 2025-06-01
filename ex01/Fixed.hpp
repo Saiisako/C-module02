@@ -6,7 +6,7 @@
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 14:43:07 by skock             #+#    #+#             */
-/*   Updated: 2025/05/16 17:43:39 by skock            ###   ########.fr       */
+/*   Updated: 2025/05/31 09:34:28 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <cstring>
-
+#include <cmath>
 
 class Fixed
 {
@@ -31,4 +31,8 @@ class Fixed
 		~Fixed();
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
-};
+		float	toFloat(void) const;
+		int		toInt(void) const;
+
+		friend std::ostream& operator<<(std::ostream &flux, Fixed const &fraction);
+	};
