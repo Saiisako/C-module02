@@ -6,7 +6,7 @@
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 14:43:00 by skock             #+#    #+#             */
-/*   Updated: 2025/06/09 18:15:02 by skock            ###   ########.fr       */
+/*   Updated: 2025/06/24 15:42:22 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,18 @@
 
 Fixed::Fixed()
 {
-	std::cout << "Default constructor called" << std::endl;
 	n = 0;
 }
 
-Fixed::~Fixed() {std::cout << "Destructor called" << std::endl;}
+Fixed::~Fixed() {}
 
 Fixed::Fixed(const Fixed& copy)
 {
-	std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
 }
 
 Fixed& Fixed::operator=(const Fixed& other)		//a = b
 {
-	std::cout << "Copy assignment operator called" << std::endl;
 	other.getRawBits();
 	if (this != &other)
 	{
@@ -65,7 +62,8 @@ Fixed Fixed::operator*(const Fixed& a)		//a * b
 Fixed Fixed::operator/(const Fixed &a)		//a / b
 {
 	Fixed o;
-	o.setRawBits((this->n / a.n) >> i);
+
+	o.setRawBits((this->n << i) / a.n);
 	return o;
 }
 
@@ -153,13 +151,11 @@ void Fixed::setRawBits(int const raw)
 
 Fixed::Fixed(const int cn)
 {
-	std::cout << "int constructor called" << std::endl;
 	n = cn << i;
 }
 
 Fixed::Fixed(const float cn)
 {
-	std::cout << "float constructor called" << std::endl;
 	n = roundf(cn * (1 << i));
 }
 

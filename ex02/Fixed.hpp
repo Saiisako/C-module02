@@ -6,7 +6,7 @@
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 14:43:07 by skock             #+#    #+#             */
-/*   Updated: 2025/06/09 18:14:41 by skock            ###   ########.fr       */
+/*   Updated: 2025/06/24 14:55:30 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,4 @@ class Fixed
 		static const Fixed& max(const Fixed&a, const Fixed&b);
 		static Fixed& max(Fixed&a, Fixed&b);
 	};
-	std::ostream& operator<<(std::ostream &flux, Fixed const &fraction);
+std::ostream& operator<<(std::ostream &flux, Fixed const &fraction);

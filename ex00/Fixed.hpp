@@ -6,7 +6,7 @@
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 14:43:07 by skock             #+#    #+#             */
-/*   Updated: 2025/05/31 09:34:12 by skock            ###   ########.fr       */
+/*   Updated: 2025/06/24 12:09:33 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ class Fixed
 		Fixed(const Fixed& copy);
 		Fixed& operator=(const Fixed& other);
 		~Fixed();
+		void	setRawBits(int const raw);
 		int		getRawBits(void) const;
 };

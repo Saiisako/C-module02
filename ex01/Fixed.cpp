@@ -6,7 +6,7 @@
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 14:43:00 by skock             #+#    #+#             */
-/*   Updated: 2025/05/31 10:11:59 by skock            ###   ########.fr       */
+/*   Updated: 2025/06/24 13:26:55 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,13 @@ void Fixed::setRawBits(int const raw)
 }
 
 
-Fixed::Fixed(const int cn)
+Fixed::Fixed(const int cn) // divide by 256
 {
 	std::cout << "int constructor called" << std::endl;
 	n = cn << i;
 }
 
-Fixed::Fixed(const float cn)
+Fixed::Fixed(const float cn) 
 {
 	std::cout << "float constructor called" << std::endl;
 	n = roundf(cn * (1 << i));

@@ -6,17 +6,16 @@
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 14:43:00 by skock             #+#    #+#             */
-/*   Updated: 2025/05/16 17:37:48 by skock            ###   ########.fr       */
+/*   Updated: 2025/06/24 12:17:37 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 
-Fixed::Fixed() 
+Fixed::Fixed() :n(0)
 {
 	std::cout << "Default constructor called" << std::endl;
-	n = 0;
 }
 
 Fixed::~Fixed() {std::cout << "Destructor called" << std::endl;}
